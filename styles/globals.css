@@ -6,12 +6,12 @@
 @tailwind utilities;
 
 :root {
-  --text-primary: rgb(10, 16, 47);
+  --text-primary: rgba(10, 16, 47, 0.8);
   --button-primary: rgb(75, 42, 173);
 }
 
 body {
-  @apply font-inter text-lg opacity-80 text-[var(--text-primary)];
+  @apply font-inter mx-2 text-lg text-[var(--text-primary)];
 }
 
 @layer utilities {
@@ -21,14 +21,30 @@ body {
   @apply font-dmsans text-4xl md:text-5xl lg:text-7xl font-extrabold text-black leading-none;
 }
 
+.title {
+  @apply font-dmsans text-3xl md:text-4xl lg:text-5xl font-extrabold text-black leading-none;
+}
+
 .custom-button {
-  @apply inline-block bg-[var(--button-primary)] text-white px-8 py-3 border-black shadow-md rounded-full text-center text-sm font-bold;
+  @apply inline-block border-b-8 border-2 hover:border-b-2 transition-all duration-300 bg-[var(--button-primary)] text-white px-8 py-4 border-black rounded-full text-center text-base font-bold;
 }
 
 .grid_row {
-  @apply grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-6;
+  @apply grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-6 items-center justify-items-center;
+}
+
+.grid_col {
+  @apply grid grid-rows-2 gap-6 items-center justify-items-center;
 }
 
 .title_subtitle {
-  @apply flex flex-col gap-4 items-center text-center lg:text-left lg:items-start;
+  @apply flex flex-col gap-6 md:gap-10 items-center text-center lg:text-left lg:items-start;
+}
+
+.banner_image {
+  @apply h-[300px] w-[300px] md:h-[500px] md:w-[500px];
+}
+
+img {
+  @apply w-full h-full overflow-hidden;
 }

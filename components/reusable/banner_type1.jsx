@@ -8,8 +8,8 @@ const Banner = ({ title, description, button, image_path }) => {
           {button}
         </a>
       </div>
-      <div>
-        <img src={image_path} alt="banner_image" />
+      <div className="banner_image">
+        <img src={image_path} alt="banner" />
       </div>
     </div>
   );
